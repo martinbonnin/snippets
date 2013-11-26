@@ -11,7 +11,9 @@ all:
 clean:
 	rm -rf *.o *.so a.out c
 	
+ADB_DIR=/data/martin/
+
 transfer:
-	adb push liba.so /tmp/liba.so
-	adb push libb.so /tmp/libb.so
-	adb push c /tmp/c
+	adb push liba.so $(ADB_DIR)/liba.so
+	adb push libb.so $(ADB_DIR)libb.so
+	adb push c $(ADB_DIR)/c
